@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>To Do List</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="box" id="heading">
+        <% if(kindOfDay=="Saturday" || kindOfDay=="Sunday"){%>
+            <h1 style="color: paleturquoise;"><%=kindOfDay  %> </h1>
+        <% }else{ %>
+            <h1 style="color: ghostwhite;"><%=kindOfDay  %> </h1>
+        <% } %>
+    </div>
+
+<div class="box">
+
+    <div class="item">
+
+        <% for(var i=0;i<newListItems.length;i++){ %>
+            <br>
+            <input type="checkbox"><p> <%=newListItems[i]%></p>
+       <% }%>
+
+    </div>
+     
+    <form  class="item" action="/" method="post">
+        <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+        <button type="submit" name="button">+</button>
+    </form>
+    
+</div>
+
+
+
+
+
+
+</body>
+</html>
